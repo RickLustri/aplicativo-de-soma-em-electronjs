@@ -5,8 +5,8 @@ var formulario = document.getElementById('formulario');
 var resultado = document.getElementById('resultado');
 
 // crianndo uma funçao de soma 
-function somar(event){
-    
+function somar(event) {
+
     // previnindo o comportamento padrao
     event.preventDefault();
 
@@ -14,11 +14,22 @@ function somar(event){
     var n1 = parseInt(numero1.value);
     var n2 = parseInt(numero2.value);
 
-    // fazendo a soma
-    var soma = n1 + n2;
-    
-    // exibindo o resultado na tela
-    resultado.innerText = soma
+    // validando os inputs
+    if (isNaN(n1) || isNaN(n2)) {
+        resultado.innerText = 'PREENCHA OS CAMPOS CORRETAMENTE'
+        return
+    }
+
+        // fazendo a soma
+        var soma = n1 + n2;
+
+        // exibindo o resultado na tela
+        resultado.innerText = soma
+
+        // limpando os inputs
+        numero1.value = '';
+        numero2.value = '';
+
 };
 
 // Cria uma regra para não permitir que o campo de numero seja preenchido com letras:
