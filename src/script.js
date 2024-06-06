@@ -16,15 +16,15 @@ function somar(event) {
 
     // validando os inputs
     if (isNaN(n1) || isNaN(n2)) {
-        resultado.innerText = 'PREENCHA OS CAMPOS CORRETAMENTE'
-        return
+        resultado.innerText = 'PREENCHA OS CAMPOS';
+        return;
     }
 
         // fazendo a soma
         var soma = n1 + n2;
 
         // exibindo o resultado na tela
-        resultado.innerText = soma
+        resultado.innerText = soma;
 
         // limpando os inputs
         numero1.value = '';
@@ -45,7 +45,7 @@ function mascaraNumero(event) {
     event.currentTarget.value = value;
 
     // Retorna o evento:
-    return event
+    return event;
 }
 
 // Adicionando um evento de keyup e puxando a funçao:
